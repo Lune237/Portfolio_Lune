@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recycle4Pay - Détails du projet</title>
+    <link rel="icon" href="assets/img/Logo Spear Group.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .page-header {
+            background: #1d1d1d;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .section-description {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .project-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: contain;
+            margin-bottom: 30px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project-image:hover {
+            transform: scale(1.05);
+        }
+
+        .feature-list {
+            margin-top: 30px;
+            padding-left: 20px;
+            list-style-type: disc;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .feature-list li {
+            margin-bottom: 10px;
+        }
+
+        .more-images {
+            margin-top: 40px;
+        }
+
+        .carousel-item img {
+            max-height: 400px;
+            object-fit: contain;
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+
+        .carousel-control-prev, .carousel-control-next {
+            color: #28a745;
+            font-size: 2rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+        }
+
+        .carousel-control-prev-icon, .carousel-control-next-icon {
+            background-color: #28a745;
+        }
+
+        .modal-content img {
+            width: 100%;
+            object-fit: contain;
+            display: block;
+            margin: auto;
+        }
+
+        .back-to-projects {
+            display: inline-block;
+            margin-bottom: 40px;
+            padding: 10px 20px;
+            background-color: #343a40;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .back-to-projects:hover {
+            background-color: #1d1d1d;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #222;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-header">
+        <a href="realisations.html" class="position-absolute" style="top: 15px; left: 15px; font-size: 2rem; color: white;">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+        <h1>Recycle4Pay - Recyclage Rémunérateur</h1>
+        <p>Un système mobile pour récompenser les ménages pour le recyclage des plastiques</p>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <iframe width="700" height="350" src="assets/vidéos/Recycle 4Pay - Copie.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                <section>
+                    <h2 class="section-title">Description du projet</h2>
+                    <p class="section-description">
+                        Recycle4Pay est une application mobile que j'ai développée avec FlutterFlow. Elle vise à encourager la population à recycler les bouteilles plastiques en leur offrant des gains financiers pour chaque unité rapportée. Chaque bouteille recyclée permet aux ménages de cumuler des points (1 point = 1 FCFA). Chaque semaine, les collecteurs passent dans les quartiers pour récupérer les bouteilles et procèdent directement au paiement via l'application. Les bouteilles sont ensuite revendues aux entreprises partenaires.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="section-title">Tarification</h2>
+                    <p class="section-description">
+                        <strong>Paiements aux ménages :</strong><br>
+                        1,5 L = 50 FCFA ; 1 L = 30 FCFA ; 0,5 L = 25 FCFA ; 0,33 L = 20 FCFA ; 10 L = 200 FCFA<br><br>
+                        <strong>Prix de revente aux entreprises :</strong><br>
+                        1,5 L = 65 FCFA ; 1 L = 45 FCFA ; 0,5 L = 40 FCFA ; 0,33 L = 35 FCFA ; 10 L = 250 FCFA
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="section-title">Fonctionnalités principales</h2>
+                    <ul class="feature-list">
+                        <li>Application mobile pour les ménages (clients)</li>
+                        <li>Application mobile pour les collecteurs</li>
+                        <li>Dashboard de gestion pour le suivi des transactions et des collectes</li>
+                        <li>Historique des paiements et des points cumulés</li>
+                        <li>Suivi des zones desservies et planification des tournées de collecte</li>
+                        <li>Statistiques hebdomadaires et mensuelles</li>
+                    </ul>
+                </section>
+
+                <section class="more-images">
+                    <h2 class="section-title">Visuels & Vidéo de présentation</h2>
+
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="assets/img/image3.png" class="d-block w-50" alt="Capture app client">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/img/image6.png" class="d-block w-50" alt="Capture app collecteur">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/img/image7.png" class="d-block w-50" alt="Dashboard admin">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/img/image6.png" class="d-block w-50" alt="Capture app collecteur">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/img/image8.png" class="d-block w-50" alt="Dashboard admin">
+                            </div>
+                            <div class="carousel-item">
+                                <video class="d-block w-75" controls>
+                                    <source src="assets/vidéos/Recycle 4Pay - Copie.mp4" type="video/mp4">
+                                    Votre navigateur ne supporte pas la vidéo.
+                                </video>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Précédent</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Suivant</span>
+                        </a>
+                    </div>
+                </section>
+            </div>
+
+            <div class="col-md-4">
+                <div class="sidebar">
+                    <h4>Informations supplémentaires</h4>
+                    <p><strong>Durée du projet:</strong> 3 mois</p>
+                    <p><strong>Technologies utilisées:</strong> FlutterFlow, Firebase, Node.js</p>
+                    <p><strong>Client:</strong> Projet personnel à impact social</p>
+                    <p><strong>Année:</strong> 2025</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <a href="realisations.html" class="back-to-projects">Retour aux réalisations</a>
+        </div>
+    </div>
+
+    <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="" id="modalImage" alt="Image agrandie">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Lune Honoré KILAMA EVAGLE. Tous droits réservés.
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".project-image, .carousel-item img").click(function() {
+                var src = $(this).attr("src");
+                $("#modalImage").attr("src", src);
+            });
+        });
+    </script>
+</body>
+
+</html>

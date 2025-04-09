@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Réalisations - Portfolio</title>
+    <link rel="icon" href="assets/img/Logo Spear Group.png" type="image/png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<style>
+    /* Style global pour la page */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+}
+
+/* En-tête */
+header {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 60px 0;
+}
+
+header h1 {
+    font-size: 3em;
+}
+
+header .lead {
+    font-size: 1.25em;
+}
+
+/* Section Réalisations */
+#realisations .category-section h3 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #dc3545;
+}
+
+#realisations .scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+}
+
+#realisations .scroll-item {
+    min-width: 300px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+#realisations .scroll-item:hover {
+    transform: translateY(-10px);
+}
+
+#realisations .scroll-item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+#realisations .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    margin-top: 15px;
+}
+
+/* Section Flyers */
+.flyer-section h4 {
+    font-size: 1.5em;
+    color: #dc3545;
+    margin-top: 20px;
+}
+
+.flyer-section p {
+    font-size: 1.1em;
+    color: #333;
+}
+
+.flyer-section img {
+    margin-top: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 30px 0;
+}
+/* Section Vidéo */
+.video-section {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+}
+
+.video-container iframe {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles des Flyers */
+.flyer-section {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.flyer-section h4 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.flyer-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.flyer-section {
+        transition: transform 0.3s ease;
+    }
+
+.flyer-section:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+
+    .scroll-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 10px 0;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.scroll-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 10px 0;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.scroll-item {
+    flex: 0 0 auto;
+    width: 500px;
+    height: 520px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    scroll-snap-align: start;
+}
+
+.scroll-item img {
+    max-width: 100%;
+    max-height: 270px;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+    border-radius: 5px;
+}
+
+/* Responsive mobile */
+@media (max-width: 576px) {
+    .scroll-item {
+        width: 250px;
+        height: 370px;
+    }
+
+    .scroll-item img {
+        max-height: 180px;
+    }
+}
+/* Responsive mobile */
+@media (max-width: 576px) {
+    .scroll-item {
+        width: 200px;
+        height: 320px;
+    }
+
+    .scroll-item img {
+        max-height: 150px;
+    }
+}
+</style>
+<body>
+
+    <header class="bg-dark text-center py-3 text-white position-relative">
+        <!-- Icône retour -->
+        <a href="index.html" class="position-absolute" style="top: 15px; left: 15px; font-size: 2rem; color: white;">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+    
+        <h1>Mes Réalisations</h1>
+        <p class="lead">Explorez mes projets dans divers domaines : Design, Développement Web, Montage Vidéo, et bien plus !</p>
+    </header>    
+
+
+<!-- Section Réalisations par catégories -->
+<section id="realisations" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Mes Projets</h2>
+
+        <!-- Catégorie Design -->
+        <div class="category-section mb-5">
+            <h3>Design</h3>
+            <div class="scroll-container">
+                <div class="scroll-item">
+                    <img src="assets/img/Logo Spear Group b.png" class="img-fluid" alt="Design projet 1">
+                    <p>Le projet réalisé pour <strong>Spear Group</strong> visait à développer un site web professionnel et responsive mettant en avant l'ensemble des services proposés par l'entreprise. L’objectif était de proposer un site clair, fluide et accessible sur tous les appareils, tout en mettant l'accent sur la présentation visuelle des services et la facilité de prise de contact.</p>
+                    <a href="projet1-details.html" class="btn btn-danger">Voir plus</a>
+                </div>
+                <div class="scroll-item">
+                    <img src="assets/img/Moon web.jpg" class="img-fluid" alt="Design projet 2">
+                    <p>Design de bannières et visuels pour campagnes publicitaires.</p>
+                    <a href="projet2-details.html" class="btn btn-danger">Voir plus</a>
+                </div>
+                <!-- Ajoutez d'autres éléments de design ici -->
+            </div>
+        </div>
+
+        <!-- Catégorie Montage Vidéo -->
+        <div class="category-section mb-5">
+            <h3>Montage Vidéo</h3>
+            <div class="scroll-container">
+                <div class="scroll-item">
+                    <img src="assets/img/image4.png" class="img-fluid" alt="Vidéo projet 1">
+                    <p>Création d'une vidéo promotionnelle pour <strong> Yupi Global.</strong> </p>
+                    <a href="projet3-details.html" class="btn btn-danger">Voir plus</a>
+                </div>
+                <div class="scroll-item">
+                    <img src="assets/img/WhatsApp Image 2025-03-29 à 01.29.07_ce55fa9e.jpg" class="img-fluid" alt="Vidéo projet 2">
+                    <p>Montage d'un clip pour la promotion de <strong> ProLink </strong></p>
+                    <a href="projet4-details.html" class="btn btn-danger">Voir plus</a>
+                </div>
+                <!-- Ajoutez d'autres éléments de vidéo ici -->
+            </div>
+        </div>
+
+        <!-- Catégorie Développement Web -->
+        <div class="category-section mb-5">
+            <h3>Développement Web</h3>
+            <div class="scroll-container">
+                <div class="scroll-item">
+                    <img src="assets/img/LOGO.png" class="img-fluid" alt="Dev Web projet 1">
+                    <p><strong> Optistock </strong> est une application web dédiée à la gestion des stocks et à la gestion des ventes. Elle permet aux utilisateurs de suivre les niveaux de stock, d'enregistrer les ventes et de générer des rapports en temps réel pour optimiser la gestion d'inventaire.</p>
+                    <a href="projet5-details.html" class="btn btn-danger">Voir plus</a>
+                </div>
+                <div class="scroll-item">
+                    <img src="assets/img/Logo ProLink.svg" class="img-fluid" alt="Dev Web projet 2">
+                    <p><strong> ProLink </strong>est une plateforme innovante qui met en relation des clients avec des professionnels qualifiés dans divers domaines tels que le bricolage, l'ingénierie, la restauration, et bien plus. Grâce à un algorithme de matching intelligent, ProLink offre une expérience personnalisée en fonction de la proximité, des disponibilités, et des avis clients.</p>
+                    <a href="projet6-details.html" class="btn btn-danger">Voir plus</a>
+                </div>
+                <!-- Ajoutez d'autres éléments de développement web ici -->
+            </div>
+        </div>
+
+        <!-- Catégorie Développement Mobile -->
+        <div class="category-section mb-5">
+            <h3>Développement Mobile</h3>
+            <div class="scroll-container">
+                <div class="scroll-item">
+                    <img src="assets/img/image2.png" class="img-fluid" alt="Dev Mobile projet 1">
+                    <p> <strong> ProLink </strong> est une plateforme innovante qui met en relation des clients avec des professionnels qualifiés dans divers domaines tels que le bricolage, l'ingénierie, la restauration, et bien plus. Grâce à un algorithme de matching intelligent, ProLink offre une expérience personnalisée en fonction de la proximité, des disponibilités, et des avis clients.</p>
+                    <a href="projet7-details.html" class="btn btn-danger">Voir plus</a>
+                </div>
+                <div class="scroll-item">
+                    <img src="assets/img/image3.png" class="img-fluid" alt="Dev Mobile projet 2">
+                    <p> <strong> Recycle4Pay </strong> est une application mobile que j'ai développée avec FlutterFlow. Elle vise à encourager la population à recycler les bouteilles plastiques en leur offrant des gains financiers pour chaque unité rapportée.</p>
+                    <a href="projet8-details.html" class="btn btn-danger">Voir plus</a>
+                </div>
+                <!-- Ajoutez d'autres éléments de développement mobile ici -->
+            </div>
+        </div>
+
+        <!-- À propos de Spear Group -->
+<div class="about-spear-group mt-5">
+    <h3 class="text-center">À propos de Spear Group</h3>
+    <p class="text-center">Spear Group est une entreprise en fondation où je suis ingénieur informatique. Nous nous spécialisons dans l'import-export des marchandises, en utilisant DHL pour livrer à travers le monde, peu importe le poids du colis. Nous assurons l'achat et le suivi des marchandises depuis la Chine pour le Cameroun, ainsi que des formations en trading et bourse BRVM. Nous proposons également des prestations musicales, des services de coaching et de développement personnel.</p>
+
+    <!-- Section Vidéo de présentation -->
+    <div class="video-section py-5">
+        <h3 class="text-center mb-4">Présentation Vidéo</h3>
+        <div class="video-container text-center">
+            <iframe width="800" height="450" src="assets/vidéos/Spear Vidéo Intro.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Section Flyers avec Caroussel -->
+<div class="row">
+    <div class="col-md-4">
+        <div class="flyer-section">
+            <h4>Import-Export via DHL</h4>
+            <p>Expédiez vos marchandises avec DHL à travers le monde, quelle que soit la taille ou le poids du colis.</p>
+            <div id="carouselImportExport" class="carousel slide" data-ride="carousel" data-interval="1000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/img/Spear Group.jpeg" alt="Flyer Import-Export" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/Spear CHINE.jpg" alt="Flyer Tarifaire" class="d-block w-100">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselImportExport" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Précédent</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselImportExport" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Suivant</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="flyer-section">
+            <h4>Achat et Suivi de Marchandises</h4>
+            <p>Nous vous accompagnons dans l'achat de produits en Chine et leur suivi pour une livraison rapide et sûre au Cameroun.</p>
+            <div id="carouselAchatSuivi" class="carousel slide" data-ride="carousel" data-interval="1000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/img/Affiche groupage.jpg" alt="Flyer Achat Chine" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/Grille Tarifaire de Transport.jpg" alt="Flyer Suivi" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/Spear CHINE.jpg" alt="Flyer Groupe" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/Solution Chine.jpg" alt="Flyer Groupe" class="d-block w-100">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselAchatSuivi" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Précédent</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselAchatSuivi" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Suivant</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="flyer-section">
+            <h4>Formations en Trading et Bourse</h4>
+            <p>Apprenez à investir en bourse avec nos formations spécialisées en trading sur le marché BRVM.</p>
+            <div id="carouselTrading" class="carousel slide" data-ride="carousel" data-interval="1000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/img/BRVM.jpg" alt="Flyer BRVM" class="d-block w-100">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselTrading" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Précédent</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselTrading" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Suivant</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="flyer-section">
+            <h4>Prestations Musicales</h4>
+            <p>Nous proposons des prestations musicales de qualité pour vos événements professionnels et privés.</p>
+            <div id="carouselMusique" class="carousel slide" data-ride="carousel" data-interval="1000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/img/IMG_8143.JPG" alt="Flyer Musique" class="d-block w-100">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselMusique" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Précédent</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselMusique" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Suivant</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="flyer-section">
+            <h4>Coaching et Développement Personnel</h4>
+            <p>Découvrez nos services de coaching pour vous accompagner dans votre épanouissement personnel et professionnel.</p>
+            <div id="carouselCoaching" class="carousel slide" data-ride="carousel" data-interval="1000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/img/SPEAR_GROUP Coaching.jpg" alt="Flyer Coaching" class="d-block w-100">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselCoaching" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Précédent</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselCoaching" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Suivant</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="flyer-section">
+            <h4>Nos Solutions Innovantes</h4>
+            <p>Notre équipe est spécialisée dans la création de solutions technologiques innovantes pour les entreprises.</p>
+            <div id="carouselSolutions" class="carousel slide" data-ride="carousel" data-interval="1000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/img/Moon web.jpg" alt="Flyer Solutions Innovantes" class="d-block w-100">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselSolutions" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Précédent</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselSolutions" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Suivant</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</section>
+
+<!-- Modal for image view -->
+<div class="modal fade" id="modalImage" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img id="modalImg" src="" alt="Image" class="d-block w-100">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  <script>
+    // Modal image preview
+    $(document).on('click', '.flyer-section', function() {
+        var imgSrc = $(this).data('img');
+        $('#modalImg').attr('src', imgSrc);
+    });
+</script>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-4">
+    &copy; 2025 Lune Honoré KILAMA EVAGLE. Tous droits réservés.
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+
