@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://lune237.site/sitemap.xml

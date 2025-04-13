@@ -11,192 +11,161 @@
 </head>
 
 <style>
-    /* Style global pour la page */
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f9;
-}
-
-/* En-tête */
-header {
-    background-color: #dc3545;
-    color: #fff;
-    padding: 60px 0;
-}
-
-header h1 {
-    font-size: 3em;
-}
-
-header .lead {
-    font-size: 1.25em;
-}
-
-/* Section Réalisations */
-#realisations .category-section h3 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
-    color: #dc3545;
-}
-
-#realisations .scroll-container {
-    display: flex;
-    overflow-x: auto;
-    gap: 20px;
-}
-
-#realisations .scroll-item {
-    min-width: 300px;
-    text-align: center;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    padding: 20px;
-    transition: transform 0.3s ease;
-}
-
-#realisations .scroll-item:hover {
-    transform: translateY(-10px);
-}
-
-#realisations .scroll-item img {
-    width: 100%;
-    border-radius: 8px;
-}
-
-#realisations .btn-danger {
-    background-color: #dc3545;
-    border-color: #dc3545;
-    margin-top: 15px;
-}
-
-/* Section Flyers */
-.flyer-section h4 {
-    font-size: 1.5em;
-    color: #dc3545;
-    margin-top: 20px;
-}
-
-.flyer-section p {
-    font-size: 1.1em;
-    color: #333;
-}
-
-.flyer-section img {
-    margin-top: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-/* Footer */
-footer {
-    background-color: #dc3545;
-    color: #fff;
-    padding: 30px 0;
-}
-/* Section Vidéo */
-.video-section {
-    background-color: #f8f9fa;
-    padding: 40px 0;
-}
-
-.video-container iframe {
-    max-width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Styles des Flyers */
-.flyer-section {
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-.flyer-section h4 {
-    font-size: 18px;
-    margin-top: 10px;
-}
-
-.flyer-section img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.flyer-section {
-        transition: transform 0.3s ease;
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f9;
     }
 
-.flyer-section:hover {
-        transform: scale(1.05);
-        cursor: pointer;
+    header {
+      background-color: #dc3545;
+      color: #fff;
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3em;
+    }
+
+    header .lead {
+      font-size: 1.25em;
+    }
+
+    /* Réalisations */
+    #realisations h2 {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .category-section h3 {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+      color: #dc3545;
     }
 
     .scroll-container {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    padding: 10px 0;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-}
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      padding: 10px 0;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+    }
 
-.scroll-container {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    padding: 10px 0;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-}
-
-.scroll-item {
-    flex: 0 0 auto;
-    width: 500px;
-    height: 520px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 10px;
-    background-color: #fff;
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    scroll-snap-align: start;
-}
-
-.scroll-item img {
-    max-width: 100%;
-    max-height: 270px;
-    object-fit: contain;
-    margin: 0 auto;
-    display: block;
-    border-radius: 5px;
-}
-
-/* Responsive mobile */
-@media (max-width: 576px) {
     .scroll-item {
-        width: 250px;
-        height: 370px;
+      flex: 0 0 auto;
+      width: 500px;
+      height: 520px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 10px;
+      background-color: #fff;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      scroll-snap-align: start;
+      transition: transform 0.3s ease;
+    }
+
+    .scroll-item:hover {
+      transform: translateY(-10px);
     }
 
     .scroll-item img {
-        max-height: 180px;
-    }
-}
-/* Responsive mobile */
-@media (max-width: 576px) {
-    .scroll-item {
-        width: 200px;
-        height: 320px;
+      max-width: 100%;
+      max-height: 270px;
+      object-fit: contain;
+      margin: 0 auto 10px;
+      border-radius: 5px;
     }
 
-    .scroll-item img {
-        max-height: 150px;
+    .btn-danger {
+      background-color: #dc3545;
+      border-color: #dc3545;
+      margin-top: 15px;
     }
-}
+
+    /* Flyers */
+    .flyer-section {
+      margin-bottom: 30px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .flyer-section:hover {
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+
+    .flyer-section h4 {
+      font-size: 18px;
+      margin-top: 10px;
+      color: #dc3545;
+    }
+
+    .flyer-section p {
+      font-size: 1.1em;
+      color: #333;
+    }
+
+    .flyer-section img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-top: 15px;
+    }
+
+    /* Vidéos */
+    .video-section {
+      background-color: #f8f9fa;
+      padding: 40px 0;
+    }
+
+    .video-container iframe {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Footer */
+    footer {
+      background-color: #dc3545;
+      color: #fff;
+      padding: 30px 0;
+      text-align: center;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .scroll-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 15px;
+        }
+
+        .scroll-item {
+            flex: 0 0 auto;
+            width: 100%;
+            max-width: 300px; /* Ajustez en fonction de la taille souhaitée */
+            margin: 10px 0;
+        }
+
+        .scroll-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .scroll-item p {
+            font-size: 0.7rem; /* Réduction de la taille du texte pour mobile */
+        }
+
+        .btn {
+            font-size: 0.6rem; /* Réduction de la taille des boutons pour mobile */
+        }
+    }
 </style>
 <body>
 

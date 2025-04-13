@@ -3,396 +3,381 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio Honoré KILAMA</title>
+  
+  <title>Honoré KILAMA | Développeur Web & Mobile - UI/UX Designer</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Honoré KILAMA - Développeur web et mobile polyvalent, créateur d'interfaces UI/UX modernes. Découvrez mon portfolio et mes réalisations : web, design, applications.">
+  <meta name="keywords" content="développeur web cameroun, développeur mobile, designer UI UX, portfolio développeur, freelance Douala, création site web, applications, Honoré Kilama, Lune237, EVAGLE, KILAMA, EVAGLE, Lune, Honoré">
+  <meta name="google-site-verification" content="WpR2r3F-lPcgpus5hHBWkFVJ8tFe0YlBtm6nqTKu_tQ" />
+  <meta name="author" content="Lune Honoré KILAMA EVAGLE">
+  
+  <!-- Favicon -->
   <link rel="icon" href="assets/img/Logo Spear Group.png" type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
+
+  <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
   <style>
-    html { 
-      scroll-behavior: smooth; 
-    }
-
-    body { 
-      font-family: Arial, sans-serif; 
-      background-color: #fff; 
-      color: #000; 
-      transition: background 0.3s, color 0.3s; 
-    }
-
-    body.dark-mode { 
-      background-color: #111; 
-      color: #fff; 
-    }
-
-    header { 
-      background-color: #333; 
-      color: #fff; 
-      display: flex; 
-      justify-content: space-between; 
-      align-items: center; 
-      padding: 1rem 2rem; 
-      position: fixed; 
-      top: 0; 
-      width: 100%; 
-      z-index: 1000; 
-    }
-
-    nav a { 
-      margin: 0 0.5rem; 
-      text-decoration: none; 
-      color: inherit; 
-    }
-
-    nav a:hover { 
-      color: red; 
-    }
-
-    .section { 
-      padding: 100px 20px 60px; 
-    }
-
-    .section h2 { 
-      margin-bottom: 1rem; 
-      font-size: 2rem; 
-    }
-
-    .toggle-btn { 
-      cursor: pointer; 
-      background: none; 
-      border: none; 
-      color: inherit; 
-      font-size: 1.2rem; 
-      margin-left: 1rem;
-    }
-
-    .slider { 
-      display: flex; 
-      overflow-x: auto; 
-      gap: 1rem; 
-      scroll-snap-type: x mandatory; 
-    }
-
-    .slider img { 
-      width: 300px; 
-      height: 200px; 
-      object-fit: cover; 
-      scroll-snap-align: start; 
-      border-radius: 10px; 
-    }
-
-    footer { 
-      text-align: center; 
-      padding: 2rem; 
-      background-color: #222;
-      color: #fff; 
-    }
-
-    .social-icons i { 
-      margin: 0 10px; 
-      font-size: 1.5rem; 
-      color: #fff; 
-    }
-
-    .social-icons i:hover { 
-      color: red; 
-    }
-
-    .dark-mode .slider img { 
-      border: 2px solid red; 
-    }
-
-    .dark-mode input, .dark-mode textarea { 
-      background-color: #333; 
-      color: white; 
-      border: 1px solid red; 
-    }
-
-    .cv-btn { 
-      display: inline-block; 
-      margin-top: 1rem; padding: 0.7rem 1.5rem; 
-      background-color: red; 
-      color: white; 
-      text-decoration: none; 
-      border-radius: 8px; 
-    }
-
-    .cv-btn:hover { 
-      background-color: darkred; 
-    }
-
-    .whatsapp-float { 
-      position: fixed; 
-      bottom: 20px; right: 20px; 
-      background-color: #25d366; 
-      color: white; font-size: 1rem; 
-      padding: 0.6rem 0.8rem; border-radius: 50%; 
-      text-align: center; 
-      z-index: 999; 
-      box-shadow: 0 2px 5px rgba(0,0,0,0.3); 
-    }
-
-    .icon { 
-      font-size: 3rem; 
-      color: #007bff; 
-    }
-
-  .btn-danger {
-    background-color: #dc3545;
-    border: none;
-    transition: background-color 0.3s;
-  }
-
-  .btn-danger:hover {
-    background-color: #c82333;
-  }
-
-  .teamwork-image img {
-    transform: scale(1);
-  }
-
-  .teamwork-image img:hover {
-    transform: scale(1.1);
-  }
-
-  @media (max-width: 768px) {
-    #presentation {
-      padding-top: 60px;
-    }
-
-    .display-4 {
-      font-size: 2.5rem;
-    }
-
-    .fs-4, .fs-5 {
-      font-size: 1rem;
-    }
-
-    .teamwork-image img {
-      max-width: 100%;
-    }
-  }
-  .service-box {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .service-box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-  }
-
-  .fs-1 {
-    font-size: 4rem;
-  }
-
-  .fs-4 {
-    font-size: 1.5rem;
-  }
-
-  .fs-5 {
-    font-size: 1.1rem;
-  }
-
-  /* Responsive */
-  @media (max-width: 768px) {
-    .fs-1 {
-      font-size: 3rem;
-    }
-
-    .fs-4 {
-      font-size: 1.3rem;
-    }
-
-    .fs-5 {
-      font-size: 1rem;
-    }
-  }
-  .musique .service-box {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-  }
-
-  .musique .service-box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-  }
-
-  .fs-1 {
-    font-size: 4rem;
-  }
-
-  .fs-4 {
-    font-size: 1.5rem;
-  }
-
-  .fs-5 {
-    font-size: 1.1rem;
-  }
-
-  .btn-primary {
-    background-color: #dc3545;
-    color: white;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-  }
-
-  .btn-primary:hover {
-    background-color: #dc3545;
-  }
-
-  /* Responsive */
-  @media (max-width: 768px) {
-    .fs-1 {
-      font-size: 3rem;
-    }
-
-    .fs-4 {
-      font-size: 1.3rem;
-    }
-
-    .fs-5 {
-      font-size: 1rem;
-    }
-  }
-  .card {
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  }
-
-  .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  }
-
-  .btn-primary {
-    background-color: #dc3545;
-    color: white;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-  }
-
-  .btn-primary:hover {
-    background-color: #dc3545;
-  }
-
-  .btn-dark {
-    background-color: #dc3545;
-    color: white;
-    padding: 12px 24px;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-  }
-
-  .btn-dark:hover {
-    background-color: #dc3545;
-  }
-
-  .card-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .card-img-wrapper {
-    height: 250px;  /* Ajuste la hauteur de l'image */
-    overflow: hidden;
-  }
-
-  .card-img-top {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  /* Assurez-vous que les cartes ont la même hauteur */
-  .col-md-4 {
-    display: flex;
-    justify-content: center;
-  }
-  .card.h-100 {
-    height: 100%;
-  }
-  body.dark-mode .card {
-    border: 2px solid #dc3545; /* Bordures rouges */
-    background-color: transparent; /* Fond transparent */
-    color: white; /* Texte blanc */
+    html {
+  scroll-behavior: smooth;
 }
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #000;
+  transition: background 0.3s, color 0.3s;
+  margin: 0;
+}
+
+body.dark-mode {
+  background-color: #111;
+  color: #fff;
+}
+
+/* HEADER & NAVBAR */
+header {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: red;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* SECTIONS */
+.section {
+  padding: 100px 20px 60px;
+}
+
+.section h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+/* BUTTONS */
+.toggle-btn,
+.cv-btn,
+.btn-primary,
+.btn-dark,
 .custom-btn {
-    border: 2px solid #dc3545;
-    color: black;
-    background-color: transparent;
-    transition: all 0.3s ease;
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.cv-btn,
+.btn-primary,
+.btn-dark {
+  background-color: #dc3545;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+}
+
+.cv-btn:hover,
+.btn-primary:hover,
+.btn-dark:hover {
+  background-color: #c82333;
+}
+
+.custom-btn {
+  border: 2px solid #dc3545;
+  color: black;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: transparent;
+}
+
+.custom-btn:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+body.dark-mode .custom-btn {
+  color: white;
+  border-color: red;
+}
+
+body.dark-mode .custom-btn:hover {
+  background-color: red;
+}
+
+/* SLIDER */
+.slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  scroll-snap-type: x mandatory;
+}
+
+.slider img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  scroll-snap-align: start;
+  border-radius: 10px;
+}
+
+.dark-mode .slider img {
+  border: 2px solid red;
+}
+
+/* TEAMWORK IMAGE */
+.teamwork-image img {
+  transform: scale(1);
+  max-width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.teamwork-image img:hover {
+  transform: scale(1.1);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #222;
+  color: #fff;
+}
+
+.social-icons i {
+  margin: 0 10px;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.social-icons i:hover {
+  color: red;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  font-size: 1rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: 50%;
+  text-align: center;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* TEXT SIZE */
+.fs-1 {
+  font-size: 4rem;
+}
+.fs-4 {
+  font-size: 1.5rem;
+}
+.fs-5 {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  #presentation {
+    padding-top: 60px;
   }
 
-  .custom-btn:hover {
-    background-color: #dc3545;
-    color: white;
+  .fs-1 {
+    font-size: 3rem;
   }
-  /* Pour le mode sombre */
-  body.dark-mode .custom-btn {
-        color: white;
-        border-color: red;
-    }
 
-    body.dark-mode .custom-btn:hover {
-        color: white;
-        background-color: red;
-    }
+  .fs-4 {
+    font-size: 1.3rem;
+  }
+
+  .fs-5 {
+    font-size: 1rem;
+  }
+}
+
+/* SERVICES / MUSIQUE */
+.service-box {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-box:hover,
+.musique .service-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.musique .service-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* CARD */
+.card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-img-wrapper {
+  height: 250px;
+  overflow: hidden;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.col-md-4 {
+  display: flex;
+  justify-content: center;
+}
+
+.card.h-100 {
+  height: 100%;
+}
+
+body.dark-mode .card {
+  border: 2px solid #dc3545;
+  background-color: transparent;
+  color: white;
+}
+
+input,
+textarea {
+  transition: background 0.3s, color 0.3s;
+}
+
+.dark-mode input,
+.dark-mode textarea {
+  background-color: #333;
+  color: white;
+  border: 1px solid red;
+}
   </style>
 </head>
 <body>
   <header>
-    <div><strong>Lune Honoré KILAMA EVAGLE</strong></div>
-    <nav>
+    <div class="logo">
+      <strong>Lune Honoré KILAMA EVAGLE</strong>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+  
+    <nav id="navLinks">
       <a href="#presentation">Présentation</a>
       <a href="#video">Vidéo</a>
       <a href="#services">Services</a>
       <a href="#musique">Musique</a>
+      <a href="#evenementiel">Evènementiel</a>
       <a href="#realisations">Réalisations</a>
       <a href="#competences">Compétences</a>
       <a href="#activites">Activités Pro</a>
       <a href="#contact">Contact</a>
       <a href="#reseau">Réseaux</a>
-      <button class="toggle-btn" onclick="toggleDarkMode()">🌙</button>
-      <button class="toggle-btn" onclick="toggleLang()">EN</button>
+      <div class="header-buttons">
+        <button class="toggle-btn" onclick="toggleDarkMode()">🌙</button>
+        <button class="toggle-btn" onclick="toggleLang()">EN</button>
+      </div>
     </nav>
   </header>
 
   <section id="presentation" class="section container">
     <div class="row align-items-center">
+      <!-- Colonne pour le texte -->
       <div class="col-md-6">
         <h2 class="display-4 mb-3">Présentation</h2>
-        <p class="fs-4"><strong>Je suis Lune Honoré KILAMA EVAGLE,</strong> un entrepreneur multidisciplinaire passionné par la création de solutions innovantes.</p>
-        <p class="fs-5">En tant qu’instrumentiste, développeur web et mobile, designer graphique, et créateur vidéo, je mets mes compétences au service de projets ambitieux. Mon but est de transformer des idées créatives en solutions concrètes.</p>
-        <p class="fs-4">Polyvalent et passionné, je suis un créateur numérique complet avec une expertise avancée en développement web et mobile, design graphique, montage vidéo, branding, stratégie digitale et gestion de projet.</p>
-        <p class="fs-4">En tant qu'entrepreneur, je suis constamment à la recherche d'opportunités d'innovation.</p>
+        <p class="fs-5"><strong>Je suis Lune Honoré KILAMA EVAGLE,</strong> Chef du Service IT, Manager et Chef de Projets chez <strong>SPEAR GROUP</strong>, une entreprise leader dans le domaine des solutions technologiques innovantes.</p>
+        <p class="fs-5">Fort de mon expertise multidisciplinaire, je combine mes compétences en <strong>développement web et mobile, design graphique, montage vidéo</strong> et <strong>gestion de projets</strong> pour apporter des solutions stratégiques et créatives aux défis complexes de l’industrie.</p>
+        <p class="fs-5">En tant que Manager, je supervise une équipe talentueuse, orchestrant des projets technologiques à forte valeur ajoutée, tout en assurant une communication fluide et une gestion optimale des ressources. Mon objectif est de conduire l'innovation et la transformation numérique, tout en optimisant les performances des équipes et des projets à chaque étape de leur cycle de vie.</p>
+        <p class="fs-5">Je suis passionné par l’innovation, la gestion de projets complexes et la création de solutions numériques qui allient performance et esthétique. Mon rôle chez <strong>SPEAR GROUP</strong> consiste à anticiper les besoins technologiques, piloter des projets ambitieux et garantir leur réussite, avec un engagement constant envers l'excellence.</p>
         <p class="fs-5">Je conçois et développe des solutions numériques sur mesure pour des particuliers, entreprises ou startups.</p>
         <p class="fs-5"><strong>➤ Mon objectif : </strong>propulser votre image, vos projets et vos ambitions grâce au digital.</p>
         <div class="mt-4">
           <a href="assets/CV de Lune Honoré KILAMA EVAGLE.pdf" download class="btn btn-danger btn-lg shadow-lg">📄 Télécharger mon CV</a>
         </div>
       </div>
+  
+      <!-- Colonne pour l'image -->
       <div class="col-md-6 text-center">
         <div class="teamwork-image">
-          <img src="assets/img/image5.png" alt="Teamwork Illustration" class="img-fluid shadow-lg" style="max-width: 100%; transition: transform 0.3s ease-in-out;">
+          <img src="assets/img/Photo Lune.png" alt="Teamwork Illustration" class="img-fluid shadow-lg" style="max-width: 100%; height: auto; transition: transform 0.3s ease-in-out;">
         </div>
       </div>
     </div>
   </section>
+  
 
   <section id="video" class="section container">
     <h2>Présentation Vidéo ProLink</h2>
@@ -466,6 +451,43 @@
     </div>
     <div class="text-center mt-5">
       <p class="fs-5">Que ce soit pour la création de musique originale, des formations ou toute autre demande liée à la musique, contactez-moi et faisons de votre projet une réalité !</p>
+      <a href="#contact" class="btn btn-primary">Contactez-moi</a>
+    </div>
+  </div>
+</section>
+
+<!-- Événementiel -->
+<section class="evenementiel" id="evenementiel">
+  <div class="container py-5">
+    <h2 class="text-center mb-5">Mes Services Événementiels</h2>
+    <div class="row g-4">
+      <!-- Décoration -->
+      <div class="col-md-4">
+        <div class="service-box text-center p-4 shadow-lg rounded">
+          <i class="bi bi-emoji-heart-eyes fs-1 text-warning"></i>
+          <h5 class="mt-3 mb-2 fs-4"><strong>Décoration</strong></h5>
+          <p class="fs-5">Création d'ambiances uniques pour vos événements : mariage, anniversaire, séminaire, etc. Nous personnalisons chaque détail selon vos préférences.</p>
+        </div>
+      </div>
+      <!-- Traiteur -->
+      <div class="col-md-4">
+        <div class="service-box text-center p-4 shadow-lg rounded">
+          <i class="bi bi-cup-straw fs-1 text-success"></i>
+          <h5 class="mt-3 mb-2 fs-4"><strong>Traiteur</strong></h5>
+          <p class="fs-5">Offre de services traiteur pour vos événements. Des plats raffinés, adaptés à vos invités, avec une variété de choix pour satisfaire tous les goûts.</p>
+        </div>
+      </div>
+      <!-- Location d'Espace Vert -->
+      <div class="col-md-4">
+        <div class="service-box text-center p-4 shadow-lg rounded">
+          <i class="bi bi-house-door fs-1 text-danger"></i>
+          <h5 class="mt-3 mb-2 fs-4"><strong>Location d'Espace Vert</strong></h5>
+          <p class="fs-5">Location d’espaces verts pour des événements en plein air. Profitez d'un cadre naturel et apaisant pour vos séminaires, mariages ou tout autre événement.</p>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-5">
+      <p class="fs-5">Que vous organisiez un événement intime ou grandiose, je mets à votre disposition mes services pour créer une expérience inoubliable. Contactez-moi pour toute demande spécifique !</p>
       <a href="#contact" class="btn btn-primary">Contactez-moi</a>
     </div>
   </div>
@@ -592,13 +614,14 @@
   </div>
 </section>
 
-  <!-- Section spéciale Activités Pro & Réseau -->
+ <!-- Section spéciale Activités Pro & Réseau -->
 <section class="py-5 text-white text-center" id="activites" style="background-color: #dc3545;">
   <div class="container">
     <h2 class="mb-4">Activités Diversifiées</h2>
     <p class="mb-2">📦 <strong>Import/Export Chine – Cameroun</strong> : accompagnement, achat & transport de marchandises</p>
     <p class="mb-2">🧑‍💻 <strong>Services Tech & Créatifs</strong> : développement web/mobile, design graphique, vidéo, UI/UX</p>
     <p class="mb-2">🎶 <strong>Passion Musicale</strong> : pianiste, guitariste, batteur et chef d’orchestre</p>
+    <p class="mb-2">🎉 <strong>Événementiel</strong> : décoration, traiteur, location d'espace vert, organisation d'événements sur mesure pour tous vos besoins.</p>
     <p class="mt-4"><strong>Je suis entouré de professionnels fiables dans tous les domaines. Besoin d’un expert ? Contactez-moi !</strong></p>
   </div>
 </section>
@@ -664,10 +687,16 @@
   </a>
 
   <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+  
     function toggleDarkMode() {
       document.body.classList.toggle("dark-mode");
     }
+  
     function toggleLang() {
+      // Ajoute ici la logique de changement de langue
       alert("La version anglaise arrive bientôt ! Version anglaise coming soon!");
     }
   </script>

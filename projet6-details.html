@@ -14,12 +14,14 @@
             font-family: 'Poppins', sans-serif;
             background-color: #ffffff;
             color: #333;
+            margin: 0;
+            padding: 0;
         }
-
+    
         .container {
             margin-top: 50px;
         }
-
+    
         .page-header {
             background: #1d1d1d;
             color: white;
@@ -27,25 +29,25 @@
             text-align: center;
             margin-bottom: 30px;
         }
-
+    
         .page-header h1 {
             font-size: 2.5rem;
             font-weight: 600;
         }
-
+    
         .section-title {
             font-size: 2rem;
             margin-bottom: 20px;
             font-weight: 600;
             color: #333;
         }
-
+    
         .section-description {
             font-size: 1.2rem;
             line-height: 1.8;
             color: #555;
         }
-
+    
         .project-image {
             width: 100%;
             max-height: 400px;
@@ -54,11 +56,11 @@
             cursor: pointer;
             transition: transform 0.3s ease-in-out;
         }
-
+    
         .project-image:hover {
             transform: scale(1.05);
         }
-
+    
         .feature-list {
             margin-top: 30px;
             padding-left: 20px;
@@ -66,59 +68,52 @@
             font-size: 1.1rem;
             color: #555;
         }
-
+    
         .feature-list li {
             margin-bottom: 10px;
         }
-
-        .more-images {
-            margin-top: 40px;
-        }
-
+    
         .carousel-item img {
             max-height: 400px;
             object-fit: contain;
             border-radius: 10px;
             margin: 0 auto;
         }
-
+    
         .carousel-inner {
             position: relative;
         }
-
+    
         .carousel-control-prev, .carousel-control-next {
             color: #dc3545;
             font-size: 2rem;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
             transition: opacity 0.3s ease, transform 0.3s ease;
+            top: 50%;
         }
-
+    
         .carousel-control-prev:hover, .carousel-control-next:hover {
             opacity: 1;
             transform: scale(1.1);
         }
-
+    
         .carousel-control-prev-icon, .carousel-control-next-icon {
             background-color: #dc3545;
         }
-
-        .carousel-control-prev, .carousel-control-next {
-            top: 50%;
-        }
-
+    
         .carousel-control-prev {
             left: 10px;
         }
-
+    
         .carousel-control-next {
             right: 10px;
         }
-
+    
         .modal-content {
             overflow: auto;
             max-height: 90vh;
         }
-
+    
         .modal-content img {
             width: 100%;
             object-fit: contain;
@@ -126,13 +121,13 @@
             margin: auto;
             cursor: pointer;
         }
-
+    
         .modal-body {
             overflow: auto;
             max-height: 80vh;
             text-align: center;
         }
-
+    
         .back-to-projects {
             display: inline-block;
             background-color: #dc3545;
@@ -144,48 +139,73 @@
             margin-top: 20px;
             transition: background-color 0.3s ease;
         }
-
+    
         .back-to-projects:hover {
             background-color: #c82333;
         }
-
-        @media (max-width: 768px) {
-            .page-header h1 {
-                font-size: 2rem;
-            }
-
-            .section-title {
-                font-size: 1.8rem;
-            }
-
-            .section-description {
-                font-size: 1rem;
-            }
-        }
-
+    
         footer {
             text-align: center;
             padding: 2rem;
             background-color: #222;
             color: #fff;
         }
-
-        .back-to-projects {
-            display: inline-block;
-            margin-bottom: 40px;
-            padding: 10px 20px;
-            background-color: #343a40;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 16px;
-            text-align: center;
+    
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+    
+            .section-title {
+                font-size: 1.8rem;
+            }
+    
+            .section-description {
+                font-size: 1rem;
+            }
+    
+            .project-image {
+                max-height: 300px;
+            }
+    
+            .carousel-item img {
+                max-height: 300px;
+            }
+    
+            .back-to-projects {
+                font-size: 1rem;
+                padding: 10px 15px;
+            }
         }
-
-        .back-to-projects:hover {
-            background-color: #dc3545;
+    
+        @media (max-width: 480px) {
+            .page-header h1 {
+                font-size: 1.5rem;
+            }
+    
+            .section-title {
+                font-size: 1.5rem;
+            }
+    
+            .section-description {
+                font-size: 0.9rem;
+            }
+    
+            .project-image {
+                max-height: 250px;
+            }
+    
+            .carousel-item img {
+                max-height: 250px;
+            }
+    
+            .back-to-projects {
+                font-size: 1rem;
+                padding: 10px 15px;
+            }
         }
-    </style>
+    </style>    
 </head>
 
 <body>
@@ -264,9 +284,9 @@
             <div class="col-md-4">
                 <div class="sidebar">
                     <h4>Informations supplémentaires</h4>
-                    <p><strong>Durée du projet:</strong> 4 mois</p>
-                    <p><strong>Technologies utilisées:</strong> HTML, CSS, JavaScript, PHP, MySQL, Algorithmes de matching</p>
-                    <p><strong>Client:</strong> Entreprise de services et mise en relation</p>
+                    <p><strong>Durée du projet:</strong> 3 mois</p>
+                    <p><strong>Technologies utilisées:</strong> HTML, CSS, JavaScript, PHP, MySQL</p>
+                    <p><strong>Client:</strong> Projet personnel à impact social</p>
                     <p><strong>Année:</strong> 2025</p>
                 </div>
             </div>

@@ -10,187 +10,224 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-      body {
-          font-family: 'Poppins', sans-serif;
-          background-color: #ffffff;
-          color: #333;
-      }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+    
+        .container {
+            margin-top: 50px;
+        }
+    
+        .page-header {
+            background: #1d1d1d;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    
+        .page-header h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+    
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: #333;
+        }
+    
+        .section-description {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #555;
+        }
+    
+        .project-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: contain;
+            margin-bottom: 30px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+    
+        .project-image:hover {
+            transform: scale(1.05);
+        }
+    
+        .feature-list {
+            margin-top: 30px;
+            padding-left: 20px;
+            list-style-type: disc;
+            font-size: 1.1rem;
+            color: #555;
+        }
+    
+        .feature-list li {
+            margin-bottom: 10px;
+        }
+    
+        .carousel-item img {
+            max-height: 400px;
+            object-fit: contain;
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+    
+        .carousel-inner {
+            position: relative;
+        }
+    
+        .carousel-control-prev, .carousel-control-next {
+            color: #dc3545;
+            font-size: 2rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            top: 50%;
+        }
+    
+        .carousel-control-prev:hover, .carousel-control-next:hover {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+    
+        .carousel-control-prev-icon, .carousel-control-next-icon {
+            background-color: #dc3545;
+        }
+    
+        .carousel-control-prev {
+            left: 10px;
+        }
+    
+        .carousel-control-next {
+            right: 10px;
+        }
+    
+        .modal-content {
+            overflow: auto;
+            max-height: 90vh;
+        }
+    
+        .modal-content img {
+            width: 100%;
+            object-fit: contain;
+            display: block;
+            margin: auto;
+            cursor: pointer;
+        }
+    
+        .modal-body {
+            overflow: auto;
+            max-height: 80vh;
+            text-align: center;
+        }
+    
+        .back-to-projects {
+            display: inline-block;
+            background-color: #dc3545;
+            color: white;
+            padding: 12px 20px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+    
+        .back-to-projects:hover {
+            background-color: #c82333;
+        }
+    
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+    
+            .section-title {
+                font-size: 1.8rem;
+            }
+    
+            .section-description {
+                font-size: 1rem;
+            }
+    
+            .project-image {
+                max-height: 300px;
+            }
+    
+            .carousel-item img {
+                max-height: 300px;
+            }
+    
+            .back-to-projects {
+                font-size: 1rem;
+                padding: 10px 15px;
+            }
+        }
+    
+        @media (max-width: 480px) {
+            .page-header h1 {
+                font-size: 1.5rem;
+            }
+    
+            .section-title {
+                font-size: 1.5rem;
+            }
+    
+            .section-description {
+                font-size: 0.9rem;
+            }
+    
+            .project-image {
+                max-height: 250px;
+            }
+    
+            .carousel-item img {
+                max-height: 250px;
+            }
+    
+            .back-to-projects {
+                font-size: 1rem;
+                padding: 10px 15px;
+            }
+            .responsive-iframe-container {
+                position: relative;
+                padding-bottom: 56.25%; /* Aspect ratio 16:9 (height / width = 9 / 16 = 0.5625) */
+                height: 0;
+                overflow: hidden;
+                max-width: 100%;
+                width: 100%;
+            }
+.responsive-iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
-      .container {
-          margin-top: 50px;
-      }
-
-      .page-header {
-        background: #1d1d1d;
-          color: white;
-          padding: 10px 0;
-          text-align: center;
-          margin-bottom: 30px;
-      }
-
-      .page-header h1 {
-          font-size: 2.5rem;
-          font-weight: 600;
-      }
-
-      .section-title {
-          font-size: 2rem;
-          margin-bottom: 20px;
-          font-weight: 600;
-          color: #333;
-      }
-
-      .section-description {
-          font-size: 1.2rem;
-          line-height: 1.8;
-          color: #555;
-      }
-
-      .project-image {
-          width: 100%;
-          max-height: 400px;
-          object-fit: contain;
-          margin-bottom: 30px;
-          cursor: pointer;
-          transition: transform 0.3s ease-in-out;
-      }
-
-      .project-image:hover {
-          transform: scale(1.05);
-      }
-
-      .feature-list {
-          margin-top: 30px;
-          padding-left: 20px;
-          list-style-type: disc;
-          font-size: 1.1rem;
-          color: #555;
-      }
-
-      .feature-list li {
-          margin-bottom: 10px;
-      }
-
-      .more-images {
-          margin-top: 40px;
-      }
-
-      .carousel-item img {
-          max-height: 400px;
-          object-fit: contain;
-          border-radius: 10px;
-          margin: 0 auto;
-      }
-
-      .carousel-inner {
-          position: relative;
-      }
-
-      .carousel-control-prev, .carousel-control-next {
-          color: #dc3545;
-          font-size: 2rem;
-          text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
-          transition: opacity 0.3s ease, transform 0.3s ease;
-      }
-
-      .carousel-control-prev:hover, .carousel-control-next:hover {
-          opacity: 1;
-          transform: scale(1.1);
-      }
-
-      .carousel-control-prev-icon, .carousel-control-next-icon {
-          background-color: #dc3545;
-      }
-
-      .carousel-control-prev, .carousel-control-next {
-          top: 50%;
-      }
-
-      .carousel-control-prev {
-          left: 10px;
-      }
-
-      .carousel-control-next {
-          right: 10px;
-      }
-
-      .modal-content {
-          overflow: auto;
-          max-height: 90vh;
-      }
-
-      .modal-content img {
-          width: 100%;
-          object-fit: contain;
-          display: block;
-          margin: auto;
-          cursor: pointer;
-      }
-
-      .modal-body {
-          overflow: auto;
-          max-height: 80vh;
-          text-align: center;
-      }
-
-      .back-to-projects {
-          display: inline-block;
-          background-color: #dc3545;
-          color: white;
-          padding: 12px 20px;
-          font-size: 1.2rem;
-          border-radius: 5px;
-          text-decoration: none;
-          margin-top: 20px;
-          transition: background-color 0.3s ease;
-      }
-
-      .back-to-projects:hover {
-          background-color: #c82333;
-      }
-
-      @media (max-width: 768px) {
-          .page-header h1 {
-              font-size: 2rem;
-          }
-
-          .section-title {
-              font-size: 1.8rem;
-          }
-
-          .section-description {
-              font-size: 1rem;
-          }
-      }
-
-      footer {
-          text-align: center;
-          padding: 2rem;
-          background-color: #222;
-          color: #fff;
-      }
-
-      .back-to-projects {
-          display: inline-block;
-          margin-bottom: 40px;
-          padding: 10px 20px;
-          background-color: #343a40;
-          color: white;
-          text-decoration: none;
-          border-radius: 5px;
-          font-size: 16px;
-          text-align: center;
-      }
-
-      .back-to-projects:hover {
-          background-color: #dc3545;
-      }
-  </style>
+        }
+    
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #222;
+            color: #fff;
+        }
+    </style>
+    
 </head>
 
 <body>
 
-    <div class="page-header background: #1d1d1d; text-center py-5">
+    <div class="page-header bg-dark text-center py-5">
         <a href="realisations.html" class="position-absolute" style="top: 15px; left: 15px; font-size: 2rem; color: white;">
             <i class="fas fa-arrow-left"></i>
         </a>
@@ -201,8 +238,9 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8">
-                <!-- Project Video or Image -->
-                <iframe width="700" height="350" src="assets/vidéos/2f4d3dac-7a80-4ff4-9e46-f46b9702a778.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="responsive-iframe-container">
+                    <iframe src="assets/vidéos/Montage Yupi_Global.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>                
 
                 <section>
                     <h2 class="section-title">Présentation de YuPi Global</h2>
@@ -257,7 +295,7 @@
                     <p><strong>Durée d'activité:</strong> Depuis 2022</p>
                     <p><strong>Spécialité:</strong> Produits naturels venus d’Inde pour le bien-être et la guérison</p>
                     <p><strong>Zone d’intervention:</strong> Cameroun et Afrique centrale</p>
-                    <p><strong>Contact:</strong> +237 6 XX XX XX XX | yupi.global@email.com</p>
+                    <p><strong>Contact:</strong> +237 677 534 527 | + 237 693 826 689</p>
                 </div>
             </div>
         </div>

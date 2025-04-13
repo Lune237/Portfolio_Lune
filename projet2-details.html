@@ -9,11 +9,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
     body {
       font-family: 'Poppins', sans-serif;
       background-color: #f4f4f4;
       color: #333;
+      margin: 0;
+      padding: 0;
     }
 
     .header {
@@ -21,6 +24,7 @@
       color: #fff;
       padding: 10px 20px;
       text-align: center;
+      position: relative;
     }
 
     .header h1 {
@@ -43,6 +47,7 @@
 
     .project-block {
       margin-bottom: 60px;
+      padding: 0 15px;
     }
 
     .project-block h3 {
@@ -60,6 +65,8 @@
 
     .gallery img {
       width: 100%;
+      height: auto;
+      max-width: 100%;
       border-radius: 8px;
       transition: transform 0.3s;
       cursor: pointer;
@@ -79,6 +86,67 @@
       padding: 20px 10px;
       text-align: center;
     }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .header h1 {
+        font-size: 2rem;
+      }
+
+      .header p {
+        font-size: 1rem;
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+      }
+
+      .project-block h3 {
+        font-size: 1.3rem;
+      }
+
+      .project-description {
+        font-size: 0.95rem;
+      }
+
+      .gallery img {
+        max-height: 350px;
+      }
+
+      footer {
+        padding: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header h1 {
+        font-size: 1.5rem;
+      }
+
+      .header p {
+        font-size: 0.9rem;
+      }
+
+      .section-title {
+        font-size: 1.25rem;
+      }
+
+      .project-block h3 {
+        font-size: 1.2rem;
+      }
+
+      .project-description {
+        font-size: 0.9rem;
+      }
+
+      .gallery img {
+        max-height: 280px;
+      }
+
+      footer {
+        padding: 0.5rem;
+      }
+    }
   </style>
 </head>
 
@@ -86,14 +154,13 @@
 
   <div class="header">
     <a href="realisations.html" class="position-absolute" style="top: 15px; left: 15px; font-size: 2rem; color: white;">
-        <i class="fas fa-arrow-left"></i>
+      <i class="fas fa-arrow-left"></i>
     </a>
     <h1>Mes Réalisations Design</h1>
     <p>Création de maquettes UI/UX & flyers professionnels</p>
   </div>
 
   <div class="container">
-
     <h2 class="section-title">Flyers & UI Design</h2>
 
     <!-- SPEAR GROUP -->
@@ -104,10 +171,10 @@
       </p>
       <div class="row gallery">
         <div class="col-md-6 mb-4">
-          <img src="assets/img/Logo Spear Group b.png" alt="Flyer Spear Group" data-toggle="modal" data-target="#imageModal">
+          <img src="assets/img/Logo Spear Group b.png" class="img-fluid" alt="Flyer Spear Group" data-toggle="modal" data-target="#imageModal">
         </div>
         <div class="col-md-6 mb-4">
-          <img src="assets/img/Spear Group.jpeg" alt="Maquette UI Spear Group" data-toggle="modal" data-target="#imageModal">
+          <img src="assets/img/Spear Group.jpeg" class="img-fluid" alt="Maquette UI Spear Group" data-toggle="modal" data-target="#imageModal">
         </div>
       </div>
     </div>
@@ -120,10 +187,10 @@
       </p>
       <div class="row gallery">
         <div class="col-md-6 mb-4">
-            <img src="assets/img/WhatsApp Image 2025-03-29 à 01.11.53_2ed4a02e.jpg" alt="Figma ProLink" data-toggle="modal" data-target="#imageModal">
-          </div>
+          <img src="assets/img/WhatsApp Image 2025-03-29 à 01.11.53_2ed4a02e.jpg" class="img-fluid" alt="Figma ProLink" data-toggle="modal" data-target="#imageModal">
+        </div>
         <div class="col-md-6 mb-4">
-          <img src="assets/img/image2.png" alt="Figma ProLink" data-toggle="modal" data-target="#imageModal">
+          <img src="assets/img/image2.png" class="img-fluid" alt="Figma ProLink" data-toggle="modal" data-target="#imageModal">
         </div>
       </div>
     </div>
@@ -136,14 +203,13 @@
       </p>
       <div class="row gallery">
         <div class="col-md-6 mb-4">
-            <img src="assets/img/image1.png" alt="Figma Optistock" data-toggle="modal" data-target="#imageModal">
-          </div>
+          <img src="assets/img/image1.png" class="img-fluid" alt="Figma Optistock" data-toggle="modal" data-target="#imageModal">
+        </div>
         <div class="col-md-6 mb-4">
-          <img src="assets/img/image9.png" alt="Figma Optistock" data-toggle="modal" data-target="#imageModal">
+          <img src="assets/img/image9.png" class="img-fluid" alt="Figma Optistock" data-toggle="modal" data-target="#imageModal">
         </div>
       </div>
     </div>
-
   </div>
 
   <!-- MODAL -->

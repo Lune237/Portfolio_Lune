@@ -14,12 +14,14 @@
             font-family: 'Poppins', sans-serif;
             background-color: #ffffff;
             color: #333;
+            margin: 0;
+            padding: 0;
         }
-
+    
         .container {
             margin-top: 50px;
         }
-
+    
         .page-header {
             background: #1d1d1d;
             color: white;
@@ -27,25 +29,25 @@
             text-align: center;
             margin-bottom: 30px;
         }
-
+    
         .page-header h1 {
             font-size: 2.5rem;
             font-weight: 600;
         }
-
+    
         .section-title {
             font-size: 2rem;
             margin-bottom: 20px;
             font-weight: 600;
             color: #333;
         }
-
+    
         .section-description {
             font-size: 1.2rem;
             line-height: 1.8;
             color: #555;
         }
-
+    
         .project-image {
             width: 100%;
             max-height: 400px;
@@ -54,11 +56,11 @@
             cursor: pointer;
             transition: transform 0.3s ease-in-out;
         }
-
+    
         .project-image:hover {
             transform: scale(1.05);
         }
-
+    
         .feature-list {
             margin-top: 30px;
             padding-left: 20px;
@@ -66,50 +68,50 @@
             font-size: 1.1rem;
             color: #555;
         }
-
+    
         .feature-list li {
             margin-bottom: 10px;
         }
-
+    
         .more-images {
             margin-top: 40px;
         }
-
+    
         .carousel-item img {
             max-height: 400px;
             object-fit: contain;
             border-radius: 10px;
             margin: 0 auto;
         }
-
+    
         .carousel-control-prev, .carousel-control-next {
             color: #dc3545;
             font-size: 2rem;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
         }
-
+    
         .carousel-control-prev-icon, .carousel-control-next-icon {
             background-color: #dc3545;
         }
-
+    
         .modal-content {
             overflow: auto;
             max-height: 90vh;
         }
-
+    
         .modal-content img {
             width: 100%;
             object-fit: contain;
             display: block;
             margin: auto;
         }
-
+    
         .modal-body {
             overflow: auto;
             max-height: 80vh;
             text-align: center;
         }
-
+    
         .back-to-projects {
             display: inline-block;
             margin-bottom: 40px;
@@ -120,124 +122,209 @@
             border-radius: 5px;
             font-size: 16px;
         }
-
+    
         .back-to-projects:hover {
             background-color: #dc3545;
         }
-
+    
         footer {
             text-align: center;
             padding: 2rem;
             background-color: #222;
             color: #fff;
         }
-    </style>
+    
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+    
+            .section-title {
+                font-size: 1.5rem;
+            }
+    
+            .section-description {
+                font-size: 1rem;
+            }
+    
+            .project-image {
+                max-height: 300px;
+            }
+    
+            .feature-list {
+                font-size: 1rem;
+            }
+    
+            .carousel-item img {
+                max-height: 300px;
+            }
+    
+            .modal-content img {
+                max-width: 100%;
+            }
+    
+            .back-to-projects {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+    
+            footer {
+                padding: 1rem;
+            }
+        }
+    
+        @media (max-width: 480px) {
+            .page-header h1 {
+                font-size: 1.5rem;
+            }
+    
+            .section-title {
+                font-size: 1.25rem;
+            }
+    
+            .section-description {
+                font-size: 0.95rem;
+            }
+    
+            .project-image {
+                max-height: 250px;
+            }
+    
+            .feature-list {
+                font-size: 0.95rem;
+            }
+    
+            .carousel-item img {
+                max-height: 250px;
+            }
+    
+            .modal-content img {
+                max-width: 100%;
+            }
+    
+            .back-to-projects {
+                font-size: 14px;
+                padding: 6px 14px;
+            }
+    
+            footer {
+                padding: 1rem;
+            }
+        }
+    </style>    
 </head>
 
 <body>
 
-    <!-- Page Header -->
-    <div class="page-header">
-        <a href="realisations.html" class="position-absolute" style="top: 15px; left: 15px; font-size: 2rem; color: white;">
-            <i class="fas fa-arrow-left"></i>
-        </a>
-        <h1>Développement Web pour Spear Group</h1>
-        <p>Création d’une plateforme moderne pour une entreprise multiservices internationale</p>
-    </div>
+   <!-- Page Header -->
+   <div class="page-header bg-dark text-center py-5">
+    <a href="realisations.html" class="position-absolute" style="top: 15px; left: 15px; font-size: 2rem; color: white;">
+        <i class="fas fa-arrow-left"></i>
+    </a>
+    <h1>Création de l'Identité Visuelle pour Spear Group</h1>
+    <p>Conception d’une image de marque moderne et cohérente pour une entreprise multiservices internationale</p>
+</div>
 
-    <div class="container">
-        <div class="row">
-            <!-- Contenu principal -->
-            <div class="col-md-8">
-                <img src="assets/img/Logo Spear Group b.png" alt="Logo Spear Group" class="project-image" data-toggle="modal" data-target="#imageModal">
+<div class="container">
+    <div class="row">
+        <!-- Contenu principal -->
+        <div class="col-md-8">
+            <img src="assets/img/Logo Spear Group b.png" alt="Logo Spear Group" class="project-image" data-toggle="modal" data-target="#imageModal">
 
-                <!-- Description du projet -->
-                <section>
-                    <h2 class="section-title">Description du projet</h2>
-                    <p class="section-description">
-                        Le projet réalisé pour <strong>Spear Group</strong> visait à développer un site web professionnel et responsive mettant en avant l'ensemble des services proposés par l'entreprise. Spear Group est une société innovante opérant à l’échelle internationale, spécialisée dans :
-                    </p>
-                    <ul class="feature-list">
-                        <li>Les expéditions internationales</li>
-                        <li>L’achat et le transport de marchandises depuis la Chine vers l’Afrique</li>
-                        <li>Le coaching et le développement personnel</li>
-                        <li>Les solutions technologiques innovantes (design graphique, montage vidéo, développement web/mobile, UI/UX, etc.)</li>
-                    </ul>
-                    <p class="section-description">
-                        L’objectif était de proposer un site clair, fluide et accessible sur tous les appareils, tout en mettant l'accent sur la présentation visuelle des services et la facilité de prise de contact.
-                    </p>
-                </section>
+            <!-- Description du projet -->
+            <section>
+                <h2 class="section-title">Description du projet</h2>
+                <p class="section-description">
+                    Le projet réalisé pour <strong>Spear Group</strong> visait à concevoir une identité visuelle forte et cohérente pour une entreprise naissante, cherchant à se démarquer dans un marché international compétitif. Spear Group, une entreprise dynamique et innovante, offre une gamme de services diversifiés, dont :
+                </p>
+                <ul class="feature-list">
+                    <li>Les expéditions internationales</li>
+                    <li>L’achat et le transport de marchandises depuis la Chine vers l’Afrique</li>
+                    <li>Le coaching et le développement personnel</li>
+                    <li>Les solutions technologiques innovantes (design graphique, montage vidéo, développement web/mobile, UI/UX, etc.)</li>
+                </ul>
+                <p class="section-description">
+                    L’objectif principal était de créer une identité visuelle qui reflète les valeurs de l’entreprise : l’innovation, la fiabilité et l’authenticité. Cette identité devait non seulement être moderne et visuellement attrayante, mais aussi suffisamment flexible pour s'adapter aux différents secteurs d'activité de l'entreprise.
+                </p>
+            </section>
 
-                <!-- Fonctionnalités -->
-                <section>
-                    <h2 class="section-title">Fonctionnalités principales</h2>
-                    <ul class="feature-list">
-                        <li>Page d’accueil moderne avec présentation de tous les pôles d’activité</li>
-                        <li>Galerie multimédia pour les projets réalisés (montages, logos, flyers...)</li>
-                        <li>Formulaire de contact interactif</li>
-                        <li>Section dédiée aux formations et coachings</li>
-                        <li>Design responsive compatible mobile, tablette et ordinateur</li>
-                        <li>Optimisation SEO pour un meilleur référencement</li>
-                    </ul>
-                </section>
+            <!-- Processus de création -->
+            <section>
+                <h2 class="section-title">Le Processus de Création</h2>
+                <p class="section-description">
+                    La création de l’identité visuelle pour Spear Group a impliqué plusieurs étapes pour garantir une cohérence et une adaptabilité optimales :
+                </p>
+                <ul class="feature-list">
+                    <li>Développement du logo, symbolisant l'innovation et la puissance de l'entreprise</li>
+                    <li>Élaboration d'une charte graphique complète, incluant la palette de couleurs et la typographie, en parfaite harmonie avec l'image de la société</li>
+                    <li>Création de visuels pour les supports de communication (cartes de visite, brochures, flyers, etc.)</li>
+                    <li>Design de templates pour les documents officiels, garantissant une uniformité dans les communications internes et externes</li>
+                    <li>Création d’illustrations et d’éléments graphiques pour renforcer la présence de la marque sur divers supports</li>
+                </ul>
+                <p class="section-description">
+                    Une attention particulière a été portée à la simplicité et au professionnalisme, avec un design moderne qui communique clairement les valeurs de l'entreprise tout en restant adaptable à différents formats et supports.
+                </p>
+            </section>
 
-                <!-- Carrousel d'images -->
-                <section class="more-images">
-                    <h2 class="section-title">Aperçus visuels</h2>
+            <!-- Résultat final -->
+            <section>
+                <h2 class="section-title">Le Résultat Final</h2>
+                <p class="section-description">
+                    À la fin de ce projet, Spear Group disposait d’une identité visuelle complète et harmonieuse qui a renforcé sa position sur le marché. Cette nouvelle image de marque a permis à l’entreprise de mieux se faire connaître et d’établir une communication claire et professionnelle avec ses clients, partenaires et prospects.
+                </p>
+                <p class="section-description">
+                    La mise en œuvre de cette identité visuelle a facilité l'internationalisation de la marque et a permis à Spear Group de se différencier dans les secteurs technologique et commercial, tout en augmentant sa visibilité et sa reconnaissance à l’échelle mondiale.
+                </p>
+            </section>
+            <!-- Carrousel d'images -->
+<section class="more-images">
+    <h2 class="section-title">Aperçus visuels</h2>
 
-                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="assets/img/Logo Spear Group b.png" class="d-block w-50" alt="Visuel 1" data-toggle="modal" data-target="#imageModal">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="assets/img/Affiche groupage.jpg" class="d-block w-50" alt="Visuel 2" data-toggle="modal" data-target="#imageModal">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="assets/img/Grille Tarifaire de Transport.jpg" class="d-block w-50" alt="Visuel 3" data-toggle="modal" data-target="#imageModal">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="assets/img/Moon web.jpg" class="d-block w-50" alt="Visuel 4" data-toggle="modal" data-target="#imageModal">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="assets/img/Spear Group.jpeg" class="d-block w-50" alt="Visuel 5" data-toggle="modal" data-target="#imageModal">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="assets/img/SPEAR_GROUP Coaching.jpg" class="d-block w-50" alt="Visuel 6" data-toggle="modal" data-target="#imageModal">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="assets/img/Spear CHINE.jpg" class="d-block w-50" alt="Visuel 7" data-toggle="modal" data-target="#imageModal">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="assets/img/Solution Chine.jpg" class="d-block w-50" alt="Visuel 8" data-toggle="modal" data-target="#imageModal">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="assets/img/cachet spear.png" class="d-block w-50" alt="Visuel 9" data-toggle="modal" data-target="#imageModal">
-                            </div>
-                        </div>
-                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Précédent</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Suivant</span>
-                        </a>
-                    </div>
-                </section>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="assets/img/Logo Spear Group b.png" class="d-block w-50" alt="Visuel 1" data-toggle="modal" data-target="#imageModal">
             </div>
-
-            <!-- Informations complémentaires -->
-            <div class="col-md-4">
-                <div class="sidebar">
-                    <h4>Informations complémentaires</h4>
-                    <p><strong>Durée du projet :</strong> 2 mois</p>
-                    <p><strong>Technologies utilisées :</strong> HTML, CSS, Bootstrap, JavaScript, PHP</p>
-                    <p><strong>Client :</strong> Spear Group</p>
-                    <p><strong>Année :</strong> 2025</p>
-                </div>
+            <div class="carousel-item">
+                <img src="assets/img/Affiche groupage.jpg" class="d-block w-50" alt="Visuel 2" data-toggle="modal" data-target="#imageModal">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/img/Grille Tarifaire de Transport.jpg" class="d-block w-50" alt="Visuel 3" data-toggle="modal" data-target="#imageModal">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/img/Moon web.jpg" class="d-block w-50" alt="Visuel 4" data-toggle="modal" data-target="#imageModal">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/img/Spear Group.jpeg" class="d-block w-50" alt="Visuel 5" data-toggle="modal" data-target="#imageModal">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/img/SPEAR_GROUP Coaching.jpg" class="d-block w-50" alt="Visuel 6" data-toggle="modal" data-target="#imageModal">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/img/Spear CHINE.jpg" class="d-block w-50" alt="Visuel 7" data-toggle="modal" data-target="#imageModal">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/img/Solution Chine.jpg" class="d-block w-50" alt="Visuel 8" data-toggle="modal" data-target="#imageModal">
+            </div>
+            <div class="carousel-item">
+                <img src="assets/img/cachet spear.png" class="d-block w-50" alt="Visuel 9" data-toggle="modal" data-target="#imageModal">
             </div>
         </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Précédent</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Suivant</span>
+        </a>
+    </div>
+</section>
+        </div>
+    </div>
+</div>
+
 
         <div class="text-center">
             <a href="realisations.html" class="back-to-projects">Retour aux réalisations</a>
